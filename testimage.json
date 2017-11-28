@@ -1,0 +1,392 @@
+{
+  "info": {
+    "started": 0,
+    "last_trace_started": 485,
+    "finished": 491,
+    "name": "total"
+  },
+  "stats": {
+    "wsgi": {
+      "count": 2,
+      "duration": 455
+    },
+    "db": {
+      "count": 6,
+      "duration": 47
+    }
+  },
+  "children": [
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 0,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "osboxes"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2017-11-28T12:57:53.498681",
+          "trace_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+          "project": "glance",
+          "parent_id": "9647cca6-b246-449d-8589-636eb25616b0",
+          "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+        },
+        "finished": 349,
+        "project": "glance",
+        "host": "osboxes",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "osboxes",
+            "request": {
+              "path": "/v2/images",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2017-11-28T12:57:53.149230",
+          "trace_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+          "project": "glance",
+          "parent_id": "9647cca6-b246-449d-8589-636eb25616b0",
+          "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+        }
+      },
+      "parent_id": "9647cca6-b246-449d-8589-636eb25616b0",
+      "trace_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+      "children": [
+        {
+          "info": {
+            "exception": "None",
+            "name": "db",
+            "service": "api",
+            "started": 302,
+            "finished": 304,
+            "project": "glance",
+            "meta.raw_payload.db-stop": {
+              "info": {
+                "host": "osboxes"
+              },
+              "name": "db-stop",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.453656",
+              "trace_id": "d1a11ac1-d3b6-4e38-a5c1-d79476ca461b",
+              "project": "glance",
+              "parent_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "host": "osboxes",
+            "meta.raw_payload.db-start": {
+              "info": {
+                "host": "osboxes",
+                "db": {
+                  "params": {},
+                  "statement": "SELECT 1"
+                }
+              },
+              "name": "db-start",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.451577",
+              "trace_id": "d1a11ac1-d3b6-4e38-a5c1-d79476ca461b",
+              "project": "glance",
+              "parent_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            }
+          },
+          "parent_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+          "trace_id": "d1a11ac1-d3b6-4e38-a5c1-d79476ca461b",
+          "children": []
+        },
+        {
+          "info": {
+            "exception": "None",
+            "name": "db",
+            "service": "api",
+            "started": 311,
+            "finished": 340,
+            "project": "glance",
+            "meta.raw_payload.db-stop": {
+              "info": {
+                "host": "osboxes"
+              },
+              "name": "db-stop",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.490192",
+              "trace_id": "e73bca1e-19ab-4066-b28d-6f57ca357de4",
+              "project": "glance",
+              "parent_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "host": "osboxes",
+            "meta.raw_payload.db-start": {
+              "info": {
+                "host": "osboxes",
+                "db": {
+                  "params": {
+                    "visibility_1": "community",
+                    "param_1": 25,
+                    "owner_1": "00615d3c5d824f9d9e1856f8c99dbda9",
+                    "status_8": "uploading",
+                    "status_7": "importing",
+                    "status_6": "deactivated",
+                    "status_5": "deleted",
+                    "status_4": "pending_delete",
+                    "status_3": "queued",
+                    "status_2": "saving",
+                    "status_1": "active"
+                  },
+                  "statement": "SELECT anon_1.images_created_at AS anon_1_images_created_at, anon_1.images_updated_at AS anon_1_images_updated_at, anon_1.images_deleted_at AS anon_1_images_deleted_at, anon_1.images_deleted AS anon_1_images_deleted, anon_1.images_id AS anon_1_images_id, anon_1.images_name AS anon_1_images_name, anon_1.images_disk_format AS anon_1_images_disk_format, anon_1.images_container_format AS anon_1_images_container_format, anon_1.images_size AS anon_1_images_size, anon_1.images_virtual_size AS anon_1_images_virtual_size, anon_1.images_status AS anon_1_images_status, anon_1.images_visibility AS anon_1_images_visibility, anon_1.images_checksum AS anon_1_images_checksum, anon_1.images_min_disk AS anon_1_images_min_disk, anon_1.images_min_ram AS anon_1_images_min_ram, anon_1.images_owner AS anon_1_images_owner, anon_1.images_protected AS anon_1_images_protected, image_properties_1.created_at AS image_properties_1_created_at, image_properties_1.updated_at AS image_properties_1_updated_at, image_properties_1.deleted_at AS image_properties_1_deleted_at, image_properties_1.deleted AS image_properties_1_deleted, image_properties_1.id AS image_properties_1_id, image_properties_1.image_id AS image_properties_1_image_id, image_properties_1.name AS image_properties_1_name, image_properties_1.value AS image_properties_1_value, image_locations_1.created_at AS image_locations_1_created_at, image_locations_1.updated_at AS image_locations_1_updated_at, image_locations_1.deleted_at AS image_locations_1_deleted_at, image_locations_1.deleted AS image_locations_1_deleted, image_locations_1.id AS image_locations_1_id, image_locations_1.image_id AS image_locations_1_image_id, image_locations_1.value AS image_locations_1_value, image_locations_1.meta_data AS image_locations_1_meta_data, image_locations_1.status AS image_locations_1_status, image_tags_1.created_at AS image_tags_1_created_at, image_tags_1.updated_at AS image_tags_1_updated_at, image_tags_1.deleted_at AS image_tags_1_deleted_at, image_tags_1.deleted AS image_tags_1_deleted, image_tags_1.id AS image_tags_1_id, image_tags_1.image_id AS image_tags_1_image_id, image_tags_1.value AS image_tags_1_value \nFROM (SELECT images.created_at AS images_created_at, images.updated_at AS images_updated_at, images.deleted_at AS images_deleted_at, images.deleted AS images_deleted, images.id AS images_id, images.name AS images_name, images.disk_format AS images_disk_format, images.container_format AS images_container_format, images.size AS images_size, images.virtual_size AS images_virtual_size, images.status AS images_status, images.visibility AS images_visibility, images.checksum AS images_checksum, images.min_disk AS images_min_disk, images.min_ram AS images_min_ram, images.owner AS images_owner, images.protected AS images_protected \nFROM images \nWHERE images.deleted = false AND images.status IN (%(status_1)s, %(status_2)s, %(status_3)s, %(status_4)s, %(status_5)s, %(status_6)s, %(status_7)s, %(status_8)s) AND (images.owner = %(owner_1)s OR images.visibility != %(visibility_1)s) ORDER BY images.created_at DESC, images.id DESC \n LIMIT %(param_1)s) AS anon_1 LEFT OUTER JOIN image_properties AS image_properties_1 ON anon_1.images_id = image_properties_1.image_id LEFT OUTER JOIN image_locations AS image_locations_1 ON anon_1.images_id = image_locations_1.image_id LEFT OUTER JOIN image_tags AS image_tags_1 ON anon_1.images_id = image_tags_1.image_id ORDER BY anon_1.images_created_at DESC, anon_1.images_id DESC"
+                }
+              },
+              "name": "db-start",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.460785",
+              "trace_id": "e73bca1e-19ab-4066-b28d-6f57ca357de4",
+              "project": "glance",
+              "parent_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            }
+          },
+          "parent_id": "754aa3a0-48d3-400f-b56b-99d83e4da2c4",
+          "trace_id": "e73bca1e-19ab-4066-b28d-6f57ca357de4",
+          "children": []
+        }
+      ]
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 385,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "osboxes"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2017-11-28T12:57:53.640830",
+          "trace_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+          "project": "glance",
+          "parent_id": "9647cca6-b246-449d-8589-636eb25616b0",
+          "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+        },
+        "finished": 491,
+        "project": "glance",
+        "host": "osboxes",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "osboxes",
+            "request": {
+              "path": "/v2/images",
+              "scheme": "http",
+              "method": "GET",
+              "query": "marker=63384bcd-e59d-40b6-8a54-5d96ab559b6a"
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2017-11-28T12:57:53.534858",
+          "trace_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+          "project": "glance",
+          "parent_id": "9647cca6-b246-449d-8589-636eb25616b0",
+          "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+        }
+      },
+      "parent_id": "9647cca6-b246-449d-8589-636eb25616b0",
+      "trace_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+      "children": [
+        {
+          "info": {
+            "exception": "None",
+            "name": "db",
+            "service": "api",
+            "started": 422,
+            "finished": 427,
+            "project": "glance",
+            "meta.raw_payload.db-stop": {
+              "info": {
+                "host": "osboxes"
+              },
+              "name": "db-stop",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.576782",
+              "trace_id": "39f3cd85-a626-4f76-b9cf-081f13659e65",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "host": "osboxes",
+            "meta.raw_payload.db-start": {
+              "info": {
+                "host": "osboxes",
+                "db": {
+                  "params": {},
+                  "statement": "SELECT 1"
+                }
+              },
+              "name": "db-start",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.571379",
+              "trace_id": "39f3cd85-a626-4f76-b9cf-081f13659e65",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            }
+          },
+          "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+          "trace_id": "39f3cd85-a626-4f76-b9cf-081f13659e65",
+          "children": []
+        },
+        {
+          "info": {
+            "meta.raw_payload.db-start": {
+              "info": {
+                "host": "osboxes",
+                "db": {
+                  "params": {
+                    "id_1": "63384bcd-e59d-40b6-8a54-5d96ab559b6a"
+                  },
+                  "statement": "SELECT images.created_at AS images_created_at, images.updated_at AS images_updated_at, images.deleted_at AS images_deleted_at, images.deleted AS images_deleted, images.id AS images_id, images.name AS images_name, images.disk_format AS images_disk_format, images.container_format AS images_container_format, images.size AS images_size, images.virtual_size AS images_virtual_size, images.status AS images_status, images.visibility AS images_visibility, images.checksum AS images_checksum, images.min_disk AS images_min_disk, images.min_ram AS images_min_ram, images.owner AS images_owner, images.protected AS images_protected, image_properties_1.created_at AS image_properties_1_created_at, image_properties_1.updated_at AS image_properties_1_updated_at, image_properties_1.deleted_at AS image_properties_1_deleted_at, image_properties_1.deleted AS image_properties_1_deleted, image_properties_1.id AS image_properties_1_id, image_properties_1.image_id AS image_properties_1_image_id, image_properties_1.name AS image_properties_1_name, image_properties_1.value AS image_properties_1_value, image_locations_1.created_at AS image_locations_1_created_at, image_locations_1.updated_at AS image_locations_1_updated_at, image_locations_1.deleted_at AS image_locations_1_deleted_at, image_locations_1.deleted AS image_locations_1_deleted, image_locations_1.id AS image_locations_1_id, image_locations_1.image_id AS image_locations_1_image_id, image_locations_1.value AS image_locations_1_value, image_locations_1.meta_data AS image_locations_1_meta_data, image_locations_1.status AS image_locations_1_status \nFROM images LEFT OUTER JOIN image_properties AS image_properties_1 ON images.id = image_properties_1.image_id LEFT OUTER JOIN image_locations AS image_locations_1 ON images.id = image_locations_1.image_id \nWHERE images.id = %(id_1)s"
+                }
+              },
+              "name": "db-start",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.596653",
+              "trace_id": "859e0310-9e0e-46e2-8e85-46ed902bfc54",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "name": "db",
+            "service": "api",
+            "started": 447,
+            "finished": 450,
+            "project": "glance",
+            "meta.raw_payload.db-stop": {
+              "info": {
+                "host": "osboxes"
+              },
+              "name": "db-stop",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.599587",
+              "trace_id": "859e0310-9e0e-46e2-8e85-46ed902bfc54",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "host": "osboxes",
+            "exception": "None"
+          },
+          "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+          "trace_id": "859e0310-9e0e-46e2-8e85-46ed902bfc54",
+          "children": []
+        },
+        {
+          "info": {
+            "exception": "None",
+            "name": "db",
+            "service": "api",
+            "started": 477,
+            "finished": 481,
+            "project": "glance",
+            "meta.raw_payload.db-stop": {
+              "info": {
+                "host": "osboxes"
+              },
+              "name": "db-stop",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.630449",
+              "trace_id": "8a730745-e348-442f-8102-2c4cd86dea65",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "host": "osboxes",
+            "meta.raw_payload.db-start": {
+              "info": {
+                "host": "osboxes",
+                "db": {
+                  "params": {},
+                  "statement": "SELECT 1"
+                }
+              },
+              "name": "db-start",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.626988",
+              "trace_id": "8a730745-e348-442f-8102-2c4cd86dea65",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            }
+          },
+          "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+          "trace_id": "8a730745-e348-442f-8102-2c4cd86dea65",
+          "children": []
+        },
+        {
+          "info": {
+            "exception": "None",
+            "name": "db",
+            "service": "api",
+            "started": 485,
+            "finished": 489,
+            "project": "glance",
+            "meta.raw_payload.db-stop": {
+              "info": {
+                "host": "osboxes"
+              },
+              "name": "db-stop",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.638447",
+              "trace_id": "57879b3a-301f-444e-9f6c-bb7f480566db",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            },
+            "host": "osboxes",
+            "meta.raw_payload.db-start": {
+              "info": {
+                "host": "osboxes",
+                "db": {
+                  "params": {
+                    "visibility_1": "community",
+                    "param_5": 25,
+                    "param_4": "63384bcd-e59d-40b6-8a54-5d96ab559b6a",
+                    "param_1": "2017-11-28T10:46:26.000000",
+                    "param_3": "",
+                    "param_2": "2017-11-28T10:46:26.000000",
+                    "owner_1": "00615d3c5d824f9d9e1856f8c99dbda9",
+                    "status_8": "uploading",
+                    "status_7": "importing",
+                    "status_6": "deactivated",
+                    "status_5": "deleted",
+                    "status_4": "pending_delete",
+                    "status_3": "queued",
+                    "status_2": "saving",
+                    "status_1": "active"
+                  },
+                  "statement": "SELECT anon_1.images_created_at AS anon_1_images_created_at, anon_1.images_updated_at AS anon_1_images_updated_at, anon_1.images_deleted_at AS anon_1_images_deleted_at, anon_1.images_deleted AS anon_1_images_deleted, anon_1.images_id AS anon_1_images_id, anon_1.images_name AS anon_1_images_name, anon_1.images_disk_format AS anon_1_images_disk_format, anon_1.images_container_format AS anon_1_images_container_format, anon_1.images_size AS anon_1_images_size, anon_1.images_virtual_size AS anon_1_images_virtual_size, anon_1.images_status AS anon_1_images_status, anon_1.images_visibility AS anon_1_images_visibility, anon_1.images_checksum AS anon_1_images_checksum, anon_1.images_min_disk AS anon_1_images_min_disk, anon_1.images_min_ram AS anon_1_images_min_ram, anon_1.images_owner AS anon_1_images_owner, anon_1.images_protected AS anon_1_images_protected, image_properties_1.created_at AS image_properties_1_created_at, image_properties_1.updated_at AS image_properties_1_updated_at, image_properties_1.deleted_at AS image_properties_1_deleted_at, image_properties_1.deleted AS image_properties_1_deleted, image_properties_1.id AS image_properties_1_id, image_properties_1.image_id AS image_properties_1_image_id, image_properties_1.name AS image_properties_1_name, image_properties_1.value AS image_properties_1_value, image_locations_1.created_at AS image_locations_1_created_at, image_locations_1.updated_at AS image_locations_1_updated_at, image_locations_1.deleted_at AS image_locations_1_deleted_at, image_locations_1.deleted AS image_locations_1_deleted, image_locations_1.id AS image_locations_1_id, image_locations_1.image_id AS image_locations_1_image_id, image_locations_1.value AS image_locations_1_value, image_locations_1.meta_data AS image_locations_1_meta_data, image_locations_1.status AS image_locations_1_status, image_tags_1.created_at AS image_tags_1_created_at, image_tags_1.updated_at AS image_tags_1_updated_at, image_tags_1.deleted_at AS image_tags_1_deleted_at, image_tags_1.deleted AS image_tags_1_deleted, image_tags_1.id AS image_tags_1_id, image_tags_1.image_id AS image_tags_1_image_id, image_tags_1.value AS image_tags_1_value \nFROM (SELECT images.created_at AS images_created_at, images.updated_at AS images_updated_at, images.deleted_at AS images_deleted_at, images.deleted AS images_deleted, images.id AS images_id, images.name AS images_name, images.disk_format AS images_disk_format, images.container_format AS images_container_format, images.size AS images_size, images.virtual_size AS images_virtual_size, images.status AS images_status, images.visibility AS images_visibility, images.checksum AS images_checksum, images.min_disk AS images_min_disk, images.min_ram AS images_min_ram, images.owner AS images_owner, images.protected AS images_protected \nFROM images \nWHERE images.deleted = false AND images.status IN (%(status_1)s, %(status_2)s, %(status_3)s, %(status_4)s, %(status_5)s, %(status_6)s, %(status_7)s, %(status_8)s) AND (images.owner = %(owner_1)s OR images.visibility != %(visibility_1)s) AND (CASE WHEN (images.created_at IS NOT NULL) THEN images.created_at END < %(param_1)s OR CASE WHEN (images.created_at IS NOT NULL) THEN images.created_at END = %(param_2)s AND CASE WHEN (images.id IS NOT NULL) THEN images.id ELSE %(param_3)s END < %(param_4)s) ORDER BY images.created_at DESC, images.id DESC \n LIMIT %(param_5)s) AS anon_1 LEFT OUTER JOIN image_properties AS image_properties_1 ON anon_1.images_id = image_properties_1.image_id LEFT OUTER JOIN image_locations AS image_locations_1 ON anon_1.images_id = image_locations_1.image_id LEFT OUTER JOIN image_tags AS image_tags_1 ON anon_1.images_id = image_tags_1.image_id ORDER BY anon_1.images_created_at DESC, anon_1.images_id DESC"
+                }
+              },
+              "name": "db-start",
+              "service": "api",
+              "timestamp": "2017-11-28T12:57:53.634364",
+              "trace_id": "57879b3a-301f-444e-9f6c-bb7f480566db",
+              "project": "glance",
+              "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+              "base_id": "9647cca6-b246-449d-8589-636eb25616b0"
+            }
+          },
+          "parent_id": "82e2a092-2c00-45e8-925d-132d2cb79484",
+          "trace_id": "57879b3a-301f-444e-9f6c-bb7f480566db",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
